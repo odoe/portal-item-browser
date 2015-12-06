@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "amd",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "out": "dist/app/main.js"
+  },
+  "files": [
+    "src/app/main.ts"
+  ]
+}

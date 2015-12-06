@@ -1,0 +1,8 @@
+dist/*
+release/*
+typings/*
+node_modules/*
+elm-stuff/*
+.sass-cache/*
+.vscode/*
+.baseDir.ts

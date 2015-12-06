@@ -1,0 +1,168 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,Verdana,"Trebuchet MS";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.429;
+  color: rgba(0,0,0,.87);
+  background-color: rgba(207,216,220 ,1)
+}
+
+.block {
+  padding: 5em 1em;
+}
+
+.element {
+    box-sizing: border-box;
+    background-color: #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s ease-in-out;
+    :hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+}
+
+// Place in mixins related dir
+@mixin flex-grid-container($wrap: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  @if $wrap {
+    justify-content: space-between;
+  }
+}
+
+// styles to be used in CSS
+.block {
+  @include flex-grid-container(wrap);
+}
+
+.element {
+  margin-bottom: 1em;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  line-height: 2em;
+  color: #fff;
+  padding: 1em;
+  background-color: rgba(255,87,34 ,1);
+  width: 100%;
+}
+
+@media only screen and (min-device-width : 320px) {
+  .item-card {
+    width: 140px;
+  }
+}
+
+@media only screen and (min-device-width : 360px) {
+  .item-card {
+    width: 160px;
+  }
+}
+
+@media only screen and (min-device-width : 400px) {
+  .item-card {
+    width: 185px;
+  }
+}
+
+.item-card {
+  position: relative;
+  height: 133px;
+  cursor: pointer;
+}
+
+.item-info-card {
+  position: relative;
+  margin-top: 45px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  height: 133px;
+  width: 200px;
+  .item-owner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+    background-color: rgba(207,216,220 ,0.7);
+  }
+}
+
+.item-info {
+  position: absolute;
+  background-color: rgba(255,193,7 ,1);
+  top: 5em;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+  .item-title {
+    top: 0;
+    font-size: 0.8em;
+    line-height: 35px;
+    height: 35px;
+  }
+}
+
+.item-title {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.6em;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,.50);
+  width: 100%;
+  line-height: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+.item-selected {
+  height: 100%;
+  width: 100%;
+}
+
+.hover-shadow {
+  border-radius: 50%;
+  padding: 2px 3px;
+}
+
+.back-button {
+  position: absolute;
+  left: 2px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzAgMTYuNUgxMS43NGw4LjM4LTguMzhMMTggNiA2IDE4bDEyIDEyIDIuMTItMi4xMi04LjM4LTguMzhIMzB2LTN6Ii8+PC9zdmc+);
+  width: 35px;
+  height: 35px;
+  border: none;
+  margin: 0;
+  :hover {
+    background-color: rgba(207,216,220 ,0.5)
+  }
+}
+
+.item-snippet {
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+.item-access-info {
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  color: #fff;
+  background-color: rgba(255,87,34 ,0.5);
+}
+
+.view-div {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  background-color: rgba(207,216,220 ,1);
+}
