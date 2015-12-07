@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "Test application to display Vector Tile Portal Items",
-    "repository": "https://github.com/odoe/portal-item-browser",
+    "repository": "https://github.com/odoe/portal-item-browser.git",
     "license": "MIT",
     "source-directories": [
         "src/app"
